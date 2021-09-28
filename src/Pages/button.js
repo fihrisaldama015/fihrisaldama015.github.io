@@ -9,6 +9,7 @@ export const BlueButton = styled.button`
     border-radius:10px;
     padding: 10px;
     font-weight:600;
+    box-shadow: 5px 5px 30px 10px var(--blue-shadow);
     margin-top:2vh;
     transition:0.2s;
     &:hover {

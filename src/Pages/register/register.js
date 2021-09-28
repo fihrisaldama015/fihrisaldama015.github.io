@@ -1,13 +1,20 @@
 import { BlueButton } from "../button";
 import './index.css';
 import { RegisterWithGoogle } from "../../index";
+import styled from 'styled-components';
 
 
 export const Register = () => {
+    const P = styled.p`
+        color: red;
+        font-size: .4em;
+    `;
     return(
         <header className="App-header">
             <div className="card">
-            <h1>Register</h1><br />
+            <h1>Register</h1>
+            <P>*untuk sementara signIn dengan Google</P>
+            <br />
             <form>
                 <input className="register-input" type="text" placeholder="Username"></input>
                 <input className="register-input" type="password" placeholder="Password"></input>

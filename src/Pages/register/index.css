@@ -71,6 +71,8 @@
 .register-link {
     font-size:.8rem;
     border: none;
+    font-weight: 700;
+    text-shadow: 0 0 1px var(--react-blue);
     background-color:transparent;
     color: var(--react-blue);
     margin: 0 10px;
