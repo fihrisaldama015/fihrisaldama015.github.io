@@ -1,4 +1,5 @@
 import logo from './Pages/Assets/logo.svg';
+import logo1 from './Pages/Assets/Asset1.svg';
 // import lemon from './lemon.png';
 import './App.css';
 import React from 'react';
@@ -140,9 +141,9 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-            {/* <div className="Main-logo">
-            <img src={logo2} alt="App-logo"/>
-            </div> */}
+            <div >
+            <img className="Main-logo" src={logo1} alt="App-logo"/>
+            </div>
           <nav className="App-nav">
             <ul>
               <li>

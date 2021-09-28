@@ -79,6 +79,7 @@ li {
   box-shadow:1vw 2vh 50px -2px var(--blue-shadow);
   position: static;
   color: var(--react-blue);
+  text-shadow: 0 0 20px var(--blue-shadow);
   border-radius: 6vh;
   margin: 10vh 2vw;
   padding: 15vh 40vw 10vh 10vw;
@@ -116,6 +117,13 @@ li {
   color: #61dafb;
 }
 
+.Main-logo {
+  position:absolute;
+  max-width: 30px;
+  top: 2.5vh;
+  left: 2vw;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -138,6 +146,11 @@ li {
   .opening{
     max-width: 70vw;
     padding: 15vh 10vw 10vh 10vw;
+  }
+}
+@media (max-width:768px){
+  .Main-logo{
+    display: none;
   }
 }
 @media (max-width:425px){

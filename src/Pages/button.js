@@ -4,8 +4,8 @@ import {ReactImg} from '../App'
 
 export const BlueButton = styled.button`
     color:var(--white);
-    background-color:#61dafb;
-    border:2px solid #61dafb;
+    background-color:var(--react-blue);
+    border:2px solid var(--react-blue);
     border-radius:10px;
     padding: 10px;
     font-weight:600;
