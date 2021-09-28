@@ -10,7 +10,7 @@ import { Register } from './Pages/register/register';
 import styled from 'styled-components';
 import { SignOutGoogle } from '.';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect,
