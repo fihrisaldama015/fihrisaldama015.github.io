@@ -1,19 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-/* :root{
-    --white: #fff;
+:root{
     --google-blue: #4285f4;
     --button-active-blue: #1669F2;
-} */
+}
 
 .google-btn {
   width: 184px;
   height: 42px;
   padding:1vw;
   background-color: var(--react-blue);
-  border-radius: 1vw;
+  border-radius: 15px;
   box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
-  transform: scale(.75);
+  margin: 0 auto;
 }
   .google-icon-wrapper {
     position: absolute;
@@ -21,7 +20,7 @@
     margin-left: 1px;
     width: 40px;
     height: 40px;
-    border-radius: 2vw;
+    border-radius: 15px;
     background-color: var(--white);
   }
   .google-icon {
@@ -40,8 +39,11 @@
     font-family: "Roboto";
   }btn-text:hover{cursor:grab}
   .google-btn:hover {
-    box-shadow: 0 0 6px var(--google-blue);
     cursor:auto;
+    transform: scale(.95);
+    background-color: var(--blue-sea);
+    box-shadow: 5px 5px 50px -10px var(--google-blue);
+    transition: 0.2s;
   }
   .google-btn:active {
     background: var(--button-active-blue);
@@ -49,28 +51,72 @@
 
 .card {
   background-color:var(--white);
-  padding: 8vh 4vw;
-  border-radius: 2vw;
-  box-shadow:1vw 0vh 50px -2px rgb(97,217,250,.3);
+  padding: 8vh 8vw;
+  display: grid;
+  margin: 10vh 0;
+  color: var(--react-dark);
+  justify-content: center;
+  width: 30vw;
+  border-radius: 30px;
+  box-shadow: 0 1vh 10px -5px var(--dark-shadow);
+  transform: scale(.9);
+}
+.card h1 {
+  font-size: 36pt;
+}
+
+#or {
+  margin: 2vh 0;
+  font-weight: 700;
+}
+
+form {
+  margin:5vh 0 2vh;
+}
+
+.input-name {
+  color: var(--react-dark);
+  width: 7em;
+}
+
+label {
+  float: left;
+  font-weight: 600;
+  margin: 0 0 2vh 10px;
+  font-size: 12pt;
 }
 
 .register-input{
-    display:block;
-    border: transparent;
-    border-bottom: 2px solid var(--react-blue);
+    display:grid;
+    justify-content: center;
+    border: 2px solid var(--react-blue);
+    border-radius: 15px;
     background: var(--white);
-    color: var(--react-blue);
-    padding: 10px 5px;
-    margin: 5px 0;
-    width: 100%;
+    color: var(--react-dark);
+    font-size: 12pt;
+    padding: 2vh 15px;
+    margin: 2vh auto 4vh;
+    width: 30vw;
+    transition:.2s;
+}
+
+button:hover {
+  cursor: pointer;
 }
 .register-input::placeholder {
-    color: var(--react-blue);
+  font-family: Roboto;
+  font-weight: 400;
+  opacity: 0.6  ;
+}
+.register-input:focus {
+  border: 4px solid var(--react-blue);
+  transform: scaleX(1.1);
+  box-shadow: 0 1vh 10px -10px var(--dark-shadow);
 }
 
 .register-link {
-    font-size:.8rem;
     border: none;
+    font-size: .8em;
     font-weight: 700;
     text-shadow: 0 0 1px var(--react-blue);
     background-color:transparent;
@@ -78,6 +124,40 @@
     margin: 0 10px;
 }
 .register-link:hover {
-  color:var(--react-dark);
+  color:var(--blue-sea);
   transition:.2s;
+}
+
+.submit-button {
+  color: var(--white);
+  background-color: var(--react-blue);
+  border-radius: 15px;
+  border-color: transparent;
+  padding: 10px 10px;
+  font-size: .8em;
+  font-weight: 700;
+  font-family: Roboto;
+  margin: 2vh 0;
+  transition: 0.2s;
+  width: 100%;
+}
+.submit-button:hover {
+  color: var(--white);
+  transform: scale(.95);
+  background-color: var(--blue-sea);
+  box-shadow: 5px 5px 50px -10px var(--blue-sea);
+  transition: 0.2s;
+}
+
+@media (max-width:475px) {
+  .google-btn{
+    transform: scale(1);
+  }
+  .card {
+    width: 70vw;
+    transform: scale(1);
+  }
+  .register-input{
+    width: 60vw;
+  }
 }
