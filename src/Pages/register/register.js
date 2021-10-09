@@ -4,14 +4,14 @@ import { RegisterWithGoogle } from "../../index";
 import styled from 'styled-components';
 
 
-export const Register = () => {
+export const Register = () => { 
     const P = styled.p`
         color: red;
         font-size: .4em;
     `;
     return(
         <header className="App-header">
-            <div className="card">
+            <div className="register-card">
             <h1>Daftar</h1>
             <P>*untuk sementara signIn dengan Google</P>
             <br />

@@ -14,6 +14,7 @@
   --react-dark:#444d5e;
   --dark:#282c34;
   --button-active-blue: #1669F2;
+  --blue-bantuin : #73A9E8;
 }
 
 *{
@@ -24,9 +25,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
 }
 
 code {

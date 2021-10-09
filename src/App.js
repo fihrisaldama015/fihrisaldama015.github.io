@@ -1,14 +1,16 @@
 import logo from './Pages/Assets/logo.svg';
 import logo1 from './Pages/Assets/Asset1.svg';
+import lemon from './lemon.png';
 import ProfPic from './Pages/Assets/profile_placeholder.png';
 import './App.css';
 import React from 'react';
-import {Button} from './Pages/button';
-import { BlueButton } from './Pages/button';
+// import {Button} from './Pages/button'; luuululu po e poe ;V olangonoooooooo :V
+// import { BlueButton } from './Pages/button';
 import {About} from './Pages/about';
 import { Test } from './Pages/test';
 import { Register } from './Pages/register/register';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import { Explore } from './Pages/explore';
 import { SignOutGoogle } from '.';
 import {
   HashRouter as Router,
@@ -96,7 +98,8 @@ class App extends React.Component {
               
               <Route path="/button">
                 
-                <Button />
+                {/* <Button /> */}
+                <Explore />
               </Route>
               <Route path="/about">
                 <About status={this.props.userLogin} username={this.props.username} email={this.props.email}/>
