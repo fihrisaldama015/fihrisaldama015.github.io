@@ -1,80 +1,91 @@
-import logo from './Pages/Assets/logo.svg';
-import logo1 from './Pages/Assets/Asset1.svg';
-import lemon from './lemon.png';
-import ProfPic from './Pages/Assets/profile_placeholder.png';
-import './App.css';
-import React from 'react';
+import logo from "./Pages/Assets/logo.svg";
+import logo1 from "./Pages/Assets/Asset1.svg";
+// import lemon from './lemon.png';
+import ProfPic from "./Pages/Assets/profile_placeholder.png";
+import "./App.css";
+import React from "react";
 // import {Button} from './Pages/button'; luuululu po e poe ;V olangonoooooooo :V
 // import { BlueButton } from './Pages/button';
-import {About} from './Pages/about';
-import { Test } from './Pages/test';
-import { Register } from './Pages/register/register';
+import { About } from "./Pages/about";
+import { Test } from "./Pages/test";
+import { Register } from "./Pages/register/register";
 // import styled from 'styled-components';
-import { Explore } from './Pages/explore';
-import { SignOutGoogle } from '.';
+import { Explore } from "./Pages/explore";
+import { SignOutGoogle } from ".";
 import {
   HashRouter as Router,
   Switch,
   Route,
   Redirect,
-  Link
+  Link,
 } from "react-router-dom";
 
 export const ReactImg = () => {
-  return(
-    <img src={logo} className="App-logo" alt="logo" />
-  )
-}
+  return <img src={logo} className="App-logo" alt="logo" />;
+};
 export class Profile extends React.Component {
   render() {
     return (
-    <div id="user-info">
-      <p>{this.props.status === true ? this.props.username :"Guest"}</p>
-      <img className="user-profile-picture-nav" src={this.props.userPic || ProfPic} alt="user" />
-      <Router>
-        <Link to="/">
-      {this.props.status === true ? <button className="nav-logout-button" onClick={SignOutGoogle}>Keluar</button> : null}
-        </Link>
-      </Router>
-    </div>
-    )
+      <div id="user-info">
+        <p>{this.props.status === true ? this.props.username : "Guest"}</p>
+        <img
+          className="user-profile-picture-nav"
+          src={this.props.userPic || ProfPic}
+          alt="user"
+        />
+        <Router>
+          <Link to="/">
+            {this.props.status === true ? (
+              <button className="nav-logout-button" onClick={SignOutGoogle}>
+                Keluar
+              </button>
+            ) : null}
+          </Link>
+        </Router>
+      </div>
+    );
   }
 }
 
 class App extends React.Component {
-  render(){
+  render() {
     const Homepage = () => {
-      if(this.props.userLogin === true){
+      if (this.props.userLogin === true) {
         return (
           <header className="App-header">
             <h1>Hi {this.props.username} !</h1>
             <p>Konten menyusul :)</p>
           </header>
-        )
-      }
-      else{
-        return(
+        );
+      } else {
+        return (
           <header className="App-header-home">
-          <div className="opening">
-            <ReactImg />
-            <h1>Project.</h1>
-            <p>&emsp;&emsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper risus in hendrerit gravida rutrum quisque non. Bibendum est ultricies integer quis. Lorem ipsum dolor sit amet. Imperdiet sed euismod nisi porta lorem mollis aliquam ut.</p>
-            <Link to="/login">
-              <button className="blue-button">Coba Sekarang</button>
-            </Link>
-          </div>
+            <div className="opening">
+              <ReactImg />
+              <h1>Bantuin.</h1>
+              <p>
+                &emsp;&emsp; Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Semper risus in hendrerit gravida rutrum quisque non.
+                Bibendum est ultricies integer quis. Lorem ipsum dolor sit amet.
+                Imperdiet sed euismod nisi porta lorem mollis aliquam ut.
+              </p>
+              <Link to="/login">
+                <button className="blue-button">Coba Sekarang</button>
+              </Link>
+            </div>
           </header>
-        )
+        );
       }
-    }
-  
+    };
+
     return (
       <Router>
         <div>
           <nav className="App-nav">
             <ul>
               <Link to="/">
-              <img className="Main-logo" src={logo1} alt="App-logo" />
+                <img className="Main-logo" src={logo1} alt="App-logo" />
                 <li>Home</li>
               </Link>
               <Link to="/button">
@@ -88,28 +99,37 @@ class App extends React.Component {
               </Link>
             </ul>
             <div className="user-profile">
-              <Profile userPic={this.props.userPic} status={this.props.userLogin} username={this.props.username}/>
+              <Profile
+                userPic={this.props.userPic}
+                status={this.props.userLogin}
+                username={this.props.username}
+              />
             </div>
           </nav>
           <div className="App">
-            
             <Switch>
               {/* <header className="App-header"> */}
-              
+
               <Route path="/button">
-                
                 {/* <Button /> */}
                 <Explore />
               </Route>
               <Route path="/about">
-                <About status={this.props.userLogin} username={this.props.username} email={this.props.email}/>
+                <About
+                  status={this.props.userLogin}
+                  username={this.props.username}
+                  email={this.props.email}
+                />
               </Route>
               <Route path="/test">
                 <Test />
               </Route>
-              <Route path="/login" render={() => (
-                this.props.userLogin ? <Redirect to="/" />: <Register />)}>
-              </Route>
+              <Route
+                path="/login"
+                render={() =>
+                  this.props.userLogin ? <Redirect to="/" /> : <Register />
+                }
+              ></Route>
               <Route path="/">
                 <Homepage />
               </Route>
@@ -121,6 +141,5 @@ class App extends React.Component {
     );
   }
 }
-
 
 export default App;

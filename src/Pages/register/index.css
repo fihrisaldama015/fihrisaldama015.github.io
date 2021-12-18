@@ -1,57 +1,60 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-:root{
-    --google-blue: #4285f4;
-    --button-active-blue: #1669F2;
-    --blue-bantuin : #73A9E8;
+:root {
+  --google-blue: #4285f4;
+  --button-active-blue: #1669f2;
+  --blue-bantuin: #73a9e8;
 }
 
 .google-btn {
   width: 184px;
   height: 42px;
-  padding:1vw;
+  padding: 1vw;
   background-color: var(--react-blue);
   border-radius: 15px;
-  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
   margin: 0 auto;
 }
-  .google-icon-wrapper {
-    position: absolute;
-    margin-top: 1px;
-    margin-left: 1px;
-    width: 40px;
-    height: 40px;
-    border-radius: 15px;
-    background-color: var(--white);
-  }
-  .google-icon {
-    position: absolute;
-    margin-top: 11px;
-    margin-left: -9px;
-    width: 18px;
-    height: 18px;
-  }
-  .btn-text {
-    float: right;
-    margin: 11px 11px 0 0;
-    color: var(--white);
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    font-family: "Roboto";
-  }btn-text:hover{cursor:grab}
-  .google-btn:hover {
-    cursor:auto;
-    transform: scale(.95);
-    background-color: var(--blue-sea);
-    box-shadow: 5px 5px 50px -10px var(--google-blue);
-    transition: 0.2s;
-  }
-  .google-btn:active {
-    background: var(--button-active-blue);
-  }
+.google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+.google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: -9px;
+  width: 18px;
+  height: 18px;
+}
+.btn-text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: var(--white);
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-family: "Roboto";
+}
+btn-text:hover {
+  cursor: grab;
+}
+.google-btn:hover {
+  cursor: auto;
+  transform: scale(0.95);
+  background-color: var(--blue-sea);
+  box-shadow: 5px 5px 50px -10px var(--google-blue);
+  transition: 0.2s;
+}
+.google-btn:active {
+  background: var(--button-active-blue);
+}
 
 .register-card {
-  background-color:var(--white);
+  background-color: var(--white);
   padding: 8vh 8vw;
   display: grid;
   margin: 10vh 0;
@@ -60,7 +63,7 @@
   width: 30vw;
   border-radius: 30px;
   box-shadow: 0 1vh 10px -5px var(--dark-shadow);
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 .register-card h1 {
   font-size: 36pt;
@@ -72,7 +75,7 @@
 }
 
 form {
-  margin:5vh 0 2vh;
+  margin: 5vh 0 2vh;
 }
 
 .input-name {
@@ -87,18 +90,18 @@ label {
   font-size: 12pt;
 }
 
-.register-input{
-    display:grid;
-    justify-content: center;
-    border: 2px solid var(--react-blue);
-    border-radius: 15px;
-    background: var(--white);
-    color: var(--react-dark);
-    font-size: 12pt;
-    padding: 2vh 15px;
-    margin: 2vh auto 4vh;
-    width: 30vw;
-    transition:.2s;
+.register-input {
+  display: grid;
+  justify-content: center;
+  border: 2px solid var(--react-blue);
+  border-radius: 15px;
+  background: var(--white);
+  color: var(--react-dark);
+  font-size: 12pt;
+  padding: 2vh 15px;
+  margin: 2vh auto 4vh;
+  width: 30vw;
+  transition: 0.2s;
 }
 
 button:hover {
@@ -107,7 +110,7 @@ button:hover {
 .register-input::placeholder {
   font-family: Roboto;
   font-weight: 400;
-  opacity: 0.6  ;
+  opacity: 0.6;
 }
 .register-input:focus {
   border: 4px solid var(--react-blue);
@@ -116,17 +119,17 @@ button:hover {
 }
 
 .register-link {
-    border: none;
-    font-size: .8em;
-    font-weight: 700;
-    text-shadow: 0 0 1px var(--react-blue);
-    background-color:transparent;
-    color: var(--react-blue);
-    margin: 0 10px;
+  border: none;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-shadow: 0 0 1px var(--react-blue);
+  background-color: transparent;
+  color: var(--react-blue);
+  margin: 0 10px;
 }
 .register-link:hover {
-  color:var(--blue-sea);
-  transition:.2s;
+  color: var(--blue-sea);
+  transition: 0.2s;
 }
 
 .submit-button {
@@ -135,7 +138,7 @@ button:hover {
   border-radius: 15px;
   border-color: transparent;
   padding: 10px 10px;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 700;
   font-family: Roboto;
   margin: 2vh 0;
@@ -144,21 +147,21 @@ button:hover {
 }
 .submit-button:hover {
   color: var(--white);
-  transform: scale(.95);
+  transform: scale(0.95);
   background-color: var(--blue-sea);
   box-shadow: 5px 5px 50px -10px var(--blue-sea);
   transition: 0.2s;
 }
 
-@media (max-width:475px) {
-  .google-btn{
+@media (max-width: 475px) {
+  .google-btn {
     transform: scale(1);
   }
   .register-card {
     width: 70vw;
     transform: scale(1);
   }
-  .register-input{
+  .register-input {
     width: 60vw;
   }
 }
